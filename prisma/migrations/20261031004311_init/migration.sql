@@ -1,0 +1,12 @@
+-- CreateEnum
+CREATE TYPE "BaseRole" AS ENUM ('ALUNO', 'PROFESSOR', 'ADMINISTRADOR');
+
+-- CreateTable
+CREATE TABLE "Usuario" (
+    "id" TEXT NOT NULL,
+    "nome" TEXT NOT NULL,
+    "email" TEXT NOT NULL,
+    "senha" TEXT NOT NULL,
+
+    CONSTRAINT "Usuario_pkey" PRIMARY KEY ("id")
+);
