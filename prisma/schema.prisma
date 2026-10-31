@@ -21,6 +21,7 @@ enum BaseRole {
 model Usuario {
   id String @id @default(uuid())
   nome String
-  email String
+  email String @unique
   senha String
+  role BaseRole
 }
