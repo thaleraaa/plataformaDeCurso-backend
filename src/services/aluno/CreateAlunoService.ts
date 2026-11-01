@@ -3,7 +3,7 @@ import { AlunoRequest } from "../../models/aluno/AlunoRequest";
 import { hash } from "bcryptjs";
 import { Prisma } from "../../generated/prisma/client";
 
-class CreateUserService {
+class CreateAlunoService {
     async execute ({nome, email, senha, confirmeSenha}:AlunoRequest) {
         if(!nome || !email || !senha || !confirmeSenha) {
             throw new Error ("Dados faltantes");
@@ -42,4 +42,4 @@ class CreateUserService {
     }
 }
 
-export { CreateUserService }
+export { CreateAlunoService }
