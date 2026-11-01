@@ -1,5 +1,6 @@
 import { Router, Request, Response } from "express";
 import { CreateAlunoController } from "./controller/aluno/CreateAlunoController";
+import { AuthController } from "./controller/auth/AuthController";
 
 const router = Router();
 
@@ -8,5 +9,6 @@ router.get("/test",(request: Request, response: Response) => {
 });
 
 router.post("/cadastro", new CreateAlunoController().handle);
+router.post("/login", new AuthController().handle);
 
 export { router };
